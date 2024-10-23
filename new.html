@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专业心理咨询</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #007bff, #ffffff); /* 蓝色渐变背景 */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative; /* 使 body 成为定位上下文 */
+        }
+        header {
+            background-color: rgb(255, 255, 255); /* 白色背景 */
+            color: rgb(0, 0, 0); /* 黑色文字 */
+            width: 100%; /* 100% 宽度 */
+            text-align: right; /* 文字靠右 */
+            padding: 10px 20px; /* 上下左右内边距 */
+            position: absolute; /* 绝对定位 */
+            top: 0; /* 顶部对齐 */
+        }
+        footer {
+            background-color: rgb(255, 255, 255); /* 白色背景 */
+            color: rgb(0, 0, 0); /* 黑色文字 */
+            width: 100%; /* 100% 宽度 */
+            text-align: center; /* 文字居中 */
+            padding: 10px 0; /* 上下内边距 */
+            position: absolute; /* 绝对定位 */
+            bottom: 0; /* 底部对齐 */
+        }
+        h1 {
+            color: #343a40;
+            margin-bottom: 10px; /* 减少底部间距 */
+            font-size: 5em; /* 字体大小放大到非常大 */
+            text-align: center;
+            text-shadow: 2px 2px 0px black; /* 添加黑色描边 */
+            position: relative; /* 使 h1 成为定位上下文 */
+            top: -40px; /* 向上移动，增加负值以进一步向上移动 */
+        }
+        .welcome-text {
+            position: absolute; /* 绝对定位 */
+            top: 60%; /* 垂直位置向下移动，增加此值以向下移动文本 */
+            transform: translateY(-50%); /* 垂直居中 */
+            text-align: center; /* 文本居中 */
+            color: white; /* 文本颜色为白色 */
+            font-size: 2em; /* 字体大小放大 */
+            padding: 0 20px; /* 左右内边距 */
+            text-shadow: 2px 2px 0px black; /* 添加黑色描边 */
+        }
+        .click-here {
+            position: absolute; /* 绝对定位 */
+            bottom: 50px; /* 距离底部50px */
+            right: 100px; /* 距离右侧100px，向左移动 */
+            color: yellow; /* 字体颜色为黄色 */
+            font-size: 1.5em; /* 字体大小 */
+            text-shadow: 2px 2px 0px black; /* 添加黑色描边 */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        241班1组---锟斤拷烫烫烫组
+    </header>
+
+    <h1>专业心理咨询师</h1>
+    
+    <!-- 欢迎文本 -->
+    <div class="welcome-text">
+        欢迎来到1组的心理咨询程序，<br>点击页面右下角开始与您专业的聊天机器人聊天吧！
+    </div>
+
+    <footer>
+        组员：张宇彤、赵梓涵、肖天丞、董彦良
+    </footer>
+
+    <!-- 点击这里的文本 -->
+    <div class="click-here">点击这里哦！！！</div>
+
+    <!-- 嵌入 Botpress Webchat -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/10/16/12/20241016120132-1CFOHJ7M.js"></script>
+
+    <script>
+        // 这里可以添加 Botpress Webchat 的初始化和事件监听代码
+        window.botpressWebChat.init({
+            botId: 'YOUR_BOT_ID', // 替换为您的 Bot ID
+            // 其他配置选项
+        });
+
+        // 示例：监听消息接收事件
+        window.botpressWebChat.on('message', (message) => {
+            console.log('Received message:', message);
+        });
+    </script>
+
+</body>
+</html>
